@@ -11,7 +11,7 @@ USE_MYAPP="myapp1-13 myapp1-12"
 
 inherit myapp
 
-IUSE="$(myapp_expand ${USE_MYAPP}) +myapp_targets_myapp1-12"
+IUSE="$(myapp_expand ${USE_MYAPP}) myapp"
 
 SRC_URI=""
 S="${WORKDIR}"
