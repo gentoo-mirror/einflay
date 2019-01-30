@@ -1,0 +1,7 @@
+# Copyright 1999-2019 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+
+# This file contains descriptions of the MYAPP_TARGETS USE_EXPAND flags
+
+myapp1-12 - install plugins for v 1.12
+myapp1-13 - install plugins for v 1.13
