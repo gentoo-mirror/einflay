@@ -4,6 +4,7 @@
 EAPI="7"
 
 RESTRICT="mirror"
+KEYWORDS="~amd64"
 
 SLOT="0"
 
