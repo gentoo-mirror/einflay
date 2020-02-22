@@ -9,5 +9,5 @@ LICENSE=GPLv2
 RDEPEND=
 RESTRICT=mirror
 SLOT=1.13
-_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	myapp-core	97b2648d68d66a51edeaee92d3ae7873
+_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	myapp-core	97b2648d68d66a51edeaee92d3ae7873
 _md5_=0e987b29d1e191babf3f8ba7983f1c12
