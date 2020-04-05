@@ -1,13 +1,17 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 inherit autotools bash-completion-r1 linux-info flag-o-matic systemd readme.gentoo-r1 pam
 
 DESCRIPTION="LinuX Containers userspace utilities"
 HOMEPAGE="https://linuxcontainers.org/"
-SRC_URI="https://linuxcontainers.org/downloads/lxc/${P}.tar.gz"
+
+RESTRICT="mirror"
+EGIT_COMMIT="d8ccf906038e7ca3241e572192ffa59999adb923"
+SRC_URI="https://github.com/lxc/lxc/archive/${EGIT_COMMIT}.tar.gz -> ${CATEGORY}-${PN}-${PV}.tar.gz"
+S="${WORKDIR}/lxc-${EGIT_COMMIT}"
 
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 
