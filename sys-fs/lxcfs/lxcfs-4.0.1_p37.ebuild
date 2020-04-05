@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	RESTRICT="mirror"
-	EGIT_COMMIT="2df8b9f9b20fb9dd76f8ca8d77eadf3458f25b5b"
+	EGIT_COMMIT="584fdce8efeba3ed9416ce706d5a938b58f66103"
 	SRC_URI="https://github.com/lxc/lxcfs/archive/${EGIT_COMMIT}.tar.gz -> ${CATEGORY}-${PN}-${PV}.tar.gz"
 	S="${WORKDIR}/${CATEGORY}-${PN}-${PV}"
 	KEYWORDS=""
