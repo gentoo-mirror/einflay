@@ -1,0 +1,15 @@
+--- a/config/init/systemd/lxcfs.service
++++ b/config/init/systemd/lxcfs.service
+@@ -5,10 +5,10 @@
+ Documentation=man:lxcfs(1)
+ 
+ [Service]
+-ExecStart=/usr/bin/lxcfs /var/lib/lxcfs
++ExecStart=/usr/bin/lxcfs -o allow_other,nonempty /var/lib/lxcfs
+ KillMode=process
+ Restart=on-failure
+-ExecStopPost=-/bin/fusermount -u /var/lib/lxcfs
++ExecStopPost=-/usr/bin/fusermount -u /var/lib/lxcfs
+ Delegate=yes
+ ExecReload=/bin/kill -USR1 $MAINPID
+ 
