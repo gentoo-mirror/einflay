@@ -12,7 +12,7 @@ RESTRICT="mirror"
 EGIT_COMMIT="f6b2a160a7e3e5e9d3c5767cf07c8cd03a3eca1d"
 SRC_URI="https://github.com/lxc/distrobuilder/archive/${EGIT_COMMIT}.tar.gz -> ${CATEGORY}-${PN}-${PV}.tar.gz"
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 BDEPEND="
 	dev-lang/go
