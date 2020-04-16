@@ -21,7 +21,7 @@ else
 	EGIT_COMMIT="584fdce8efeba3ed9416ce706d5a938b58f66103"
 	SRC_URI="https://github.com/lxc/lxcfs/archive/${EGIT_COMMIT}.tar.gz -> ${CATEGORY}-${PN}-${PV}.tar.gz"
 	S="${WORKDIR}/${CATEGORY}-${PN}-${PV}"
-	KEYWORDS=""
+	KEYWORDS="~amd64"
 fi
 
 # Omit all dbus.  Upstream appears to require it because systemd, but
