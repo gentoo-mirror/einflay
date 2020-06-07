@@ -24,7 +24,7 @@ DEPEND="app-arch/xz-utils
 
 DOCS="LICENSE"
 
-S="${WORKDIR}/${MY_PN}-src-${PV}"
+S="${WORKDIR}/${PN}-src-${PV}"
 
 pkg_setup() {
 	FONT_S="${S}/${PN}-ttf-${PV}"
