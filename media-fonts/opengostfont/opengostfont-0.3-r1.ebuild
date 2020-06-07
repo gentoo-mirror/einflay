@@ -26,6 +26,12 @@ DOCS="LICENSE"
 
 S="${WORKDIR}/${PN}-src-${PV}"
 
+src_prepare()
+{
+	eapply "${FILESDIR}/exception.patch"
+	eapply_user
+}
+
 pkg_setup() {
 	FONT_S="${S}/${PN}-ttf-${PV}"
 	python-any-r1_pkg_setup
