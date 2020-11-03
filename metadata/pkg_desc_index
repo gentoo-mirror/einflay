@@ -1,6 +1,7 @@
 app-admin/distrobuilder 1.0 1.0_p126: System container image builder for LXC and LXD
 app-admin/nsexec-lbthomsen 1.22_p20180419: Utilities for non-root LXC containers
 app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using the GTK+ libraries.
+app-editors/manpageeditor 0.1.3_p5: Man Page Editor
 app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
 media-fonts/emojione-color-font 1.3: A color and B&W emoji SVG-in-OpenType font
