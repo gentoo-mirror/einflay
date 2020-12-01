@@ -42,3 +42,5 @@ media-gfx/blender:smoke - Smoke simulation support
 media-gfx/blender:sse - Build with sse CPU optimisations.
 media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
 media-gfx/ktikz:ktexteditor - Using KTextEditor framework
+media-libs/draco:compat - Build in compatibility mode.
+media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
