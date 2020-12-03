@@ -5,7 +5,9 @@ EAPI="7"
 
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit cmake toolchain-funcs python-any-r1
+inherit cmake toolchain-funcs python-any-r1 llvm
+
+LLVM_MAX_SLOT=10
 
 DESCRIPTION="Intel SPMD Program Compiler"
 HOMEPAGE="https://ispc.github.com/"
@@ -23,8 +25,12 @@ SLOT="0"
 IUSE="examples"
 
 RDEPEND="
-	>=sys-devel/clang-3.0:*
-	>=sys-devel/llvm-3.0:*
+	>=sys-devel/clang-9.0:=
+	<sys-devel/llvm-11:=
+	|| (
+		sys-devel/llvm:9
+		sys-devel/llvm:10
+	)
 	"
 DEPEND="
 	${RDEPEND}
@@ -40,6 +46,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.14.0-llvm-10.patch"
 	"${FILESDIR}/${PN}-1.13.0-werror.patch"
 )
+
+llvm_check_deps() {
+	has_version -d "sys-devel/clang:${LLVM_SLOT}"
+}
 
 src_prepare() {
 	if use amd64; then
