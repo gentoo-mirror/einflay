@@ -4,7 +4,7 @@ app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using th
 app-editors/manpageeditor 0.1.3_p5: Man Page Editor
 app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
 dev-cpp/gflags 2.2.2: Google's C++ argument parsing library
-dev-lang/ispc 1.14.1: Intel SPMD Program Compiler
+dev-lang/ispc 1.14.1-r1: Intel SPMD Program Compiler
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
 media-fonts/emojione-color-font 1.3: A color and B&W emoji SVG-in-OpenType font
 media-fonts/opengostfont 0.3-r1: Free version of Russian standard (GOST) Type1 fonts
