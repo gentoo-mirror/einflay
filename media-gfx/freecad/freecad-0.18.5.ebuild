@@ -146,7 +146,7 @@ DOCS=( README.md ChangeLog.txt )
 PATCHES=(
 	"${FILESDIR}/${P}-0001-Fix-coin-related-variables-to-use-new-naming-from-4.0.0.patch"
 	"${FILESDIR}/${P}-0002-Fix-PySide-related-checks.patch"
-	"${FILESDIR}/${P}-0004-fix-std-namespace-issues.patch"
+#	"${FILESDIR}/${P}-0004-fix-std-namespace-issues.patch"
 	"${FILESDIR}/${P}-0005-Fix-a-Qt-related-crash-with-draft-workbench.patch"
 	"${FILESDIR}/${P}-0006-add-missing-include-statements.patch"
 	"${FILESDIR}/${P}-0007-fix-boost-placeholders-problem.patch"
