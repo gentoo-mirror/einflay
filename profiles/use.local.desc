@@ -5,6 +5,9 @@
 app-emulation/lxc:apparmor - Enable AppArmor support
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
+dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
+dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
+dev-python/pyside2-tools:tools - Install supplementary tools (rcc, uic, designer)
 media-gfx/blender:addons - Enable bundled addons and addons_contrib.
 media-gfx/blender:alembic - Add support for Alembic interchange format through media-libs/alembic.
 media-gfx/blender:avi - Add support for AVI codec.
