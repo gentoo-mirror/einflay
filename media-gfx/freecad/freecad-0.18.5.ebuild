@@ -2,12 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # This is in currently WIP! It should work though.
-# TODO: add oce USE flag to select between OpenCascade Community
-#	Edition and Official Version
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{7,8} )
 
 inherit check-reqs cmake desktop python-single-r1 xdg
 
@@ -17,6 +15,7 @@ HOMEPAGE="https://www.freecadweb.org/"
 if [[ ${PV} = *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/FreeCAD/FreeCAD.git"
+	KEYWORDS=""
 else
 	MY_PV=$(ver_cut 1-2)
 	MY_PV=$(ver_rs 1 '_' ${MY_PV})
@@ -58,6 +57,8 @@ for module in ${FREECAD_EXPERIMENTAL_MODULES}; do
 done
 unset module
 
+# Eigen is needed by sketcher which we enable by default, so remove USE flag and
+# unconditionally depend on it
 #	netgen? ( >=sci-mathematics/netgen-6.2.1810[mpi?,python,opencascade,${PYTHON_SINGLE_USEDEP}] )
 RDEPEND="
 	${PYTHON_DEPS}
@@ -123,7 +124,7 @@ BDEPEND="
 # Additionally if mesh is set, we auto-enable mesh_part, flat_mesh and smesh
 # Fem actually needs smesh, but as long as we don't have a smesh package, we enable
 # smesh through the mesh USE flag. Note however, the fem<-smesh dependency isn't
-# reflected by the REQUIRES_MODS macro, but at CMakeLists.txt:309.
+# reflected by the REQUIRES_MODS macro, but at CMakeLists.txt:308.
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	arch? ( mesh )
@@ -138,15 +139,20 @@ REQUIRED_USE="
 	techdraw? ( spreadsheet drawing )
 "
 
+CMAKE_BUILD_TYPE=Release
+
 DOCS=( README.md ChangeLog.txt )
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.18.4-0002-Fix-PySide-related-checks.patch
-	"${FILESDIR}"/${PN}-0.18.4-0006-add-missing-include-statements.patch
-	"${FILESDIR}"/${PN}-0.18.4-0007-fix-boost-placeholders-problem.patch
-	"${FILESDIR}"/${P}-0001-fix-std-namespace-issue-with-endl.patch
-	"${FILESDIR}"/${P}-0002-fix-path-for-coin-doc.patch
-	"${FILESDIR}"/${P}-0003-use-correct-uic-and-rcc-calls.patch
+	"${FILESDIR}/${P}-0001-Fix-coin-related-variables-to-use-new-naming-from-4.0.0.patch"
+	"${FILESDIR}/${P}-0001-fix-std-namespace-issue-with-endl.patch"
+	"${FILESDIR}/${P}-0002-Fix-PySide-related-checks.patch"
+	"${FILESDIR}/${P}-0005-Fix-a-Qt-related-crash-with-draft-workbench.patch"
+	"${FILESDIR}/${P}-0006-add-missing-include-statements.patch"
+	"${FILESDIR}/${P}-0007-fix-boost-placeholders-problem.patch"
+	"${FILESDIR}/${P}-0008-Update-swigpyrun.in-for-Python-3.8.patch"
+	"${FILESDIR}/${P}-0009-Python-skip-ci-tp_print-slot-has-been-replaced.patch"
+	"${FILESDIR}/${P}-0010-Porting-Py3.8.patch"
 )
 
 CHECKREQS_DISK_BUILD="6G"
@@ -161,7 +167,7 @@ pkg_setup() {
 src_prepare() {
 	# the upstream provided file doesn't find coin, but cmake ships
 	# a working one, so we use this.
-	rm "${S}/cMake/FindCoin3D.cmake" || die
+	rm -f "${S}/cMake/FindCoin3D.cmake"
 	cmake_src_prepare
 }
 
@@ -190,13 +196,13 @@ src_configure() {
 		-DBUILD_PART=ON # basic workspace, enable it by default
 		-DBUILD_PART_DESIGN=$(usex part-design)
 		-DBUILD_PATH=$(usex path)
-		-DBUILD_PLOT=$(usex plot) # conflicts with possible external workbench
+		-DBUILD_PLOT=OFF # conflicts with possible external workbench
 		-DBUILD_POINTS=$(usex points)
 		-DBUILD_QT5=ON # OFF means to use Qt4
 		-DBUILD_RAYTRACING=$(usex raytracing)
 		-DBUILD_REVERSEENGINEERING=OFF # currently only an empty sandbox
 		-DBUILD_ROBOT=$(usex robot)
-		-DBUILD_SHIP=$(usex ship) # conflicts with possible external workbench
+		-DBUILD_SHIP=$(usex ship)
 		-DBUILD_SHOW=$(usex show)
 		-DBUILD_SKETCHER=ON # needed by draft workspace
 		-DBUILD_SMESH=$(usex mesh)
@@ -207,20 +213,16 @@ src_configure() {
 		-DBUILD_TUX=$(usex tux)
 		-DBUILD_VR=OFF
 		-DBUILD_WEB=ON # needed by start workspace
-		-DBUILD_WITH_CONDA=OFF
 		-DCMAKE_INSTALL_DATADIR=/usr/share/${PN}/data
 		-DCMAKE_INSTALL_DOCDIR=/usr/share/doc/${PF}
 		-DCMAKE_INSTALL_INCLUDEDIR=/usr/include/${PN}
 		-DCMAKE_INSTALL_PREFIX=/usr/$(get_libdir)/${PN}
-		-DFREECAD_BUILD_DEBIAN=OFF
-		-DFREECAD_USE_EXTERNAL_KDL=ON
 		-DFREECAD_USE_EXTERNAL_SMESH=OFF
+		-DFREECAD_USE_EXTERNAL_KDL=ON
 		-DFREECAD_USE_EXTERNAL_ZIPIOS=OFF # doesn't work yet, also no package in gentoo tree
 		-DFREECAD_USE_FREETYPE=ON
-		-DFREECAD_USE_OCC_VARIANT="Official Version" # ebuild isn't ready for community edition
 		-DFREECAD_USE_PCL=$(usex pcl)
 		-DFREECAD_USE_PYBIND11=$(usex mesh)
-		-DFREECAD_USE_QT_FILEDIALOG=ON
 		# opencascade sets CASROOT in /etc/env.d/51opencascade
 		-DOCC_INCLUDE_DIR="${CASROOT}"/include/opencascade
 		-DOCC_LIBRARY_DIR="${CASROOT}/$(get_libdir)"
@@ -300,22 +302,15 @@ pkg_postinst() {
 
 	if use plot; then
 		einfo "Note: You are enabling the 'plot' USE flag."
-		einfo "This conflicts with the plot workbench that can be loaded"
+		einfo "This conflicts with the plot workbench which you can load"
 		einfo "via the addon manager! You can only install one of those."
 	fi
 
 	if use ship; then
 		einfo "Note: You are enabling the 'ship' USE flag."
-		einfo "This conflicts with the ship workbench that can be loaded"
+		einfo "This conflicts with the ship workbench which you can load"
 		einfo "via the addon manager! You can only install one of those."
 	fi
-
-	einfo "You can load a lot of additional workbenches using the integrated"
-	einfo "AddonManager."
-
-	einfo "There are a lot of additional tools, for which FreeCAD has builtin"
-	einfo "support. Some of them are available in Gentoo. Take a look at"
-	einfo "https://wiki.freecadweb.org/Installing#External_software_supported_by_FreeCAD"
 }
 
 pkg_postrm() {
