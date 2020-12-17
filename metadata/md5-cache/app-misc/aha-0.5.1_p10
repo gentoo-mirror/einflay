@@ -1,0 +1,12 @@
+DEFINED_PHASES=install unpack
+DEPEND=
+DESCRIPTION=Ansi HTML Adapter
+EAPI=7
+HOMEPAGE=https://github.com/theZiz/aha http://ziz.delphigl.com/tool_aha.php
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-1.0 LGPL-2+
+RDEPEND=
+SLOT=0
+SRC_URI=https://codeload.github.com/theZiz/aha/tar.gz/986eab3df6a075f4d509511e3a8fcfead6c4c26b -> aha-0.5.1_p10.tar.gz
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	69bd92aa099f708425db9f1f01d61213	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	l10n	8cdd85e169b835d518bc2fd59f780d8e	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd	wrapper	4251d4c84c25f59094fd557e0063a974	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=6a5d843bdc2e69e1febb6670416b5d13
