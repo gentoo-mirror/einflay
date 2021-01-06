@@ -1,7 +1,7 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI="7"
 
 inherit qmake-utils
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/Dman95/SASM/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64"
 	S="${WORKDIR}/${P^^}"
 fi
 
@@ -21,7 +21,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-PATCHES=( "${FILESDIR}"/${P}-unbundle-qtsingleapplication.patch )
+# PATCHES=( "${FILESDIR}"/${P}-unbundle-qtsingleapplication.patch )
 
 DEPEND="
 	dev-qt/qtcore:5
