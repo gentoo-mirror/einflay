@@ -1,9 +1,9 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
-inherit qmake-utils eapi7-ver
+inherit qmake-utils
 
 DESCRIPTION="Smart manager for information collecting"
 HOMEPAGE="https://github.com/xintrea/mytetra_dev"
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/xintrea/mytetra_dev.git"
 else
 	SRC_URI="https://github.com/xintrea/${PN}_dev/archive/v.${PV}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64"
 	S="${WORKDIR}/${PN}_dev-v.${PV}/"
 fi
 
