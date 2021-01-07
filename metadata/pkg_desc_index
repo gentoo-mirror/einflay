@@ -4,6 +4,7 @@ app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using th
 app-editors/manpageeditor 0.1.3_p5: Man Page Editor
 app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
 app-misc/aha 0.5.1_p10: Ansi HTML Adapter
+app-office/mytetra 1.44.55 1.44.139: Smart manager for information collecting
 dev-cpp/gflags 2.2.2: Google's C++ argument parsing library
 dev-lang/ispc 1.14.1-r1: Intel SPMD Program Compiler
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
