@@ -11,6 +11,7 @@ dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Comm
 dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1: PySide development tools (lupdate, rcc, uic)
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
+games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
 media-fonts/emojione-color-font 1.3: A color and B&W emoji SVG-in-OpenType font
 media-fonts/opengostfont 0.3-r1: Free version of Russian standard (GOST) Type1 fonts
 media-gfx/freecad 0.18.5: QT based Computer Aided Design application
