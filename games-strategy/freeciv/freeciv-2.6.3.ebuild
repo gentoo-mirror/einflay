@@ -70,9 +70,9 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=(
-	"${FILESDIR}/${P}-qt515.patch" #728254
-)
+#PATCHES=(
+#	"${FILESDIR}/${P}-qt515.patch" #728254
+#)
 
 pkg_setup() {
 	if use !dedicated && use !server ; then
@@ -95,7 +95,7 @@ src_prepare() {
 		server/Makefile.in \
 		tools/Makefile.in \
 		data/icons/Makefile.in || die
-	sed -i -e 's/=SDL/=X-SDL/' bootstrap/freeciv-sdl.desktop.in || die
+#	sed -i -e 's/=SDL/=X-SDL/' bootstrap/freeciv-sdl.desktop.in || die
 }
 
 src_configure() {
