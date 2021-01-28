@@ -1,18 +1,18 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit eutils cmake-utils qmake-utils git-r3 xdg
+inherit eutils cmake qmake-utils git-r3 xdg
 
 DESCRIPTION="A QT5-based editor for the TikZ language"
 HOMEPAGE="http://www.hackenberger.at/blog/ktikz-editor-for-the-tikz-language"
 LICENSE="GPL-2"
 SLOT="5"
 KEYWORDS=""
-IUSE="kde -ktexteditor +doc -debug"
+IUSE="kde +doc -debug"
 
-EGIT_REPO_URI="https://github.com/jfmcarreira/ktikz.git"
+EGIT_REPO_URI="https://github.com/fhackenberger/ktikz.git"
 
 DEPEND="
 	dev-qt/qtcore:5
@@ -38,17 +38,15 @@ RDEPEND="${DEPEND}
 DOCS="Changelog TODO"
 
 src_prepare() {
-	# correct the qcollectiongenerator binary
-	sed -ie 's%#QCOLLECTIONGENERATORCOMMAND = qcollectiongenerator%QCOLLECTIONGENERATORCOMMAND = /usr/lib/qt5/bin/qcollectiongenerator%g' qmake/qtikzconfig.pri || die
+	if use kde; then
+		cmake_src_prepare
+	fi
 	eapply_user
 }
 
 src_configure() {
 	if use kde; then
-			local mycmakeargs=(
-			-DKTIKZ_USE_KTEXTEDITOR=$(usex ktexteditor)
-		)
-		cmake-utils_src_configure
+		cmake_src_configure
 	else
 		KDECONFIG="CONFIG-=usekde"
 		eqmake5 qtikz.pro "CONFIG+=nostrip" "$KDECONFIG"
@@ -60,7 +58,7 @@ src_compile() {
 		    cmake_comment_add_subdirectory doc
 		fi
 		if use kde; then
-			cmake-utils_src_compile
+			cmake_src_compile
 		else
 			emake
 		fi
@@ -68,7 +66,7 @@ src_compile() {
 
 src_install() {
 		if use kde; then
-			cmake-utils_src_install
+			cmake_src_install
 		else
 			emake INSTALL_ROOT="${D}" install
 		fi
