@@ -23,3 +23,4 @@ media-libs/openusd 9999-r1: Universal Scene Description
 mycategory/myapp 1.12 1.13: MyApplication for demonstrating packaging errors and failures
 myruntime/plugin-for-the-first-use-case 1.12: Plugin for myapp
 sys-fs/lxcfs 4.0.1 4.0.1_p37: FUSE filesystem for LXC
+sys-kernel/gentoo-sources 5.10.14: Full sources including the Gentoo patchset for the 5.10 kernel tree

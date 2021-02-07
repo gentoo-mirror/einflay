@@ -43,3 +43,4 @@ media-gfx/freecad:tux - Build the Tux module
 media-gfx/ktikz:ktexteditor - Using KTextEditor framework
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
+sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
