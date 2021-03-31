@@ -3,6 +3,7 @@ DEPEND=
 DESCRIPTION=MyApplication for demonstrating packaging errors and failures
 EAPI=6
 HOMEPAGE=https://github.com/EinstokFair/einflay
+INHERIT=eapi7-ver myapp-core
 IUSE=symlink debug
 KEYWORDS=~amd64 ~x86 ~ppc
 LICENSE=GPLv2

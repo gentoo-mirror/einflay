@@ -3,6 +3,7 @@ DEPEND=x11-libs/gtksourceview:2.0 >=x11-libs/gtk+-2.24.12
 DESCRIPTION=An editor for man pages that runs on X using the GTK+ libraries.
 EAPI=7
 HOMEPAGE=https://github.com/Distrotech/gmanedit2
+INHERIT=vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=GPL-2
 RDEPEND=x11-libs/gtksourceview:2.0 >=x11-libs/gtk+-2.24.12
