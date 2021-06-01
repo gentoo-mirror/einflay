@@ -7,8 +7,8 @@ inherit desktop edos2unix qmake-utils xdg-utils
 
 DESCRIPTION="P2P private sharing application"
 HOMEPAGE="https://retroshare.cc"
-SRC_URI="https://github.com/RetroShare/RetroShare/releases/download/v${PV}/RetroShare-v${PV}-source-with-submodules.tar.gz -> ${P}.tar.gz"
-#                    https://github.com/RetroShare/RetroShare/archive/refs/tags/v0.6.6.tar.gz
+SRC_URI="https://github.com/RetroShare/RetroShare/archive/refs/tags/v0.6.6.tar.gz -> ${PN}-${PV}.tar.gz
+"
 
 # pegmarkdown can also be used with MIT
 LICENSE="AGPL-3 GPL-2 GPL-3 Apache-2.0 LGPL-3"
@@ -60,9 +60,7 @@ BDEPEND="dev-util/cmake
 		)
 	)"
 
-PATCHES=( "${FILESDIR}/${P}-qt-5.15.patch" )
-
-S="${WORKDIR}"/RetroShare
+S="${WORKDIR}"/RetroShare-${PV}
 
 src_prepare() {
 	# CRLF endings break patch...
