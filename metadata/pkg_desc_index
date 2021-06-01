@@ -6,12 +6,14 @@ app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
 app-misc/aha 0.5.1_p10: Ansi HTML Adapter
 app-office/mytetra 1.44.139: Smart manager for information collecting
 dev-cpp/gflags 2.2.2: Google's C++ argument parsing library
+dev-cpp/kashmir 2015.08.05: Library is provide functionality that not present in the C++ standard library.
 dev-lang/ispc 1.14.1-r1: Intel SPMD Program Compiler
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
 dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1: PySide development tools (lupdate, rcc, uic)
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
 games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
+media-fonts/opengostfont 0.3-r2: Free version of Russian standard (GOST) Type1 fonts
 media-gfx/freecad 0.18.5: QT based Computer Aided Design application
 media-gfx/iscan-plugin-gt1500 2.2.0.1-r2: Epson GT-1500 scanner plugin for SANE 'epkowa' backend.
 media-gfx/ktikz 0.13.1 9999: A QT5-based editor for the TikZ language
@@ -20,5 +22,7 @@ media-libs/oidn 1.2.1: Intel(R) Open Image Denoise library
 media-libs/openusd 9999-r1: Universal Scene Description
 mycategory/myapp 1.12 1.13: MyApplication for demonstrating packaging errors and failures
 myruntime/plugin-for-the-first-use-case 1.12: Plugin for myapp
+net-libs/restbed 4.7: For applications that require seamless and secure communication over HTTP
+net-p2p/retroshare 0.6.6: P2P private sharing application
 sys-fs/lxcfs 4.0.1 4.0.1_p37: FUSE filesystem for LXC
 sys-kernel/gentoo-sources 5.10.14: Full sources including the Gentoo patchset for the 5.10 kernel tree
