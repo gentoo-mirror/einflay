@@ -1,8 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
-PYTHON_COMPAT=( python3_{7..8} )
+EAPI=7
+PYTHON_COMPAT=( python3_{7..9} )
 PYTHON_REQ_USE="xml(+)"
 
 inherit meson python-single-r1 xdg
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/getting-things-gnome/gtg/releases/download/v0.4/${P}
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 arm64"
 IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
