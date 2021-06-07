@@ -4,6 +4,7 @@ app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using th
 app-editors/manpageeditor 0.1.3_p5: Man Page Editor
 app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
 app-misc/aha 0.5.1_p10: Ansi HTML Adapter
+app-office/gtg 0.4.0-r1: Personal organizer for the GNOME desktop environment
 app-office/mytetra 1.44.139: Smart manager for information collecting
 dev-cpp/gflags 2.2.2: Google's C++ argument parsing library
 dev-cpp/kashmir 2015.08.05: Library is provide functionality that not present in the C++ standard library.
