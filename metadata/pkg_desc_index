@@ -10,6 +10,7 @@ dev-cpp/gflags 2.2.2: Google's C++ argument parsing library
 dev-cpp/kashmir 2015.08.05: Library is provide functionality that not present in the C++ standard library.
 dev-lang/ispc 1.14.1-r1: Intel SPMD Program Compiler
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
+dev-python/liblarch 3.0.1: Library to handle directed acyclic graphs
 dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1: PySide development tools (lupdate, rcc, uic)
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
