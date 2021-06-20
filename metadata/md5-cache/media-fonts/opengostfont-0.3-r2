@@ -10,5 +10,5 @@ KEYWORDS=amd64 arm64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://bitbucket-archive.softwareheritage.org/new-static/f6/f638fddd-3d47-4470-98f8-851196b76418/attachments/opengostfont-src-0.3.tar.xz -> opengostfont-src-0.3.tar.xz
-_eclasses_=font	0667878c2b594871023dd1833d05996f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	python-any-r1	17241a11501065ff3651350040875aa9
+_eclasses_=font	0667878c2b594871023dd1833d05996f	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	multilib	ba7da83f763a749a2870c28785c6dc0b	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	python-any-r1	17241a11501065ff3651350040875aa9
 _md5_=f04bdd0d5fb25284e38556426296ee72
