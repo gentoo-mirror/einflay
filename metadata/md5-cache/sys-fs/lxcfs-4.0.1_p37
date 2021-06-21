@@ -11,5 +11,5 @@ RDEPEND=dev-libs/glib:2 sys-fs/fuse:0
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/lxc/lxcfs/archive/584fdce8efeba3ed9416ce706d5a938b58f66103.tar.gz -> sys-fs-lxcfs-4.0.1_p37.tar.gz
-_eclasses_=gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	7a9551c9a6680454019664620505375a	multilib	6f710a580aea2e8c7f5be70f8912ad43	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	systemd	fdf0d765c3f11f91fe54f8def9a8c0e6	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
+_eclasses_=gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	systemd	fdf0d765c3f11f91fe54f8def9a8c0e6	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
 _md5_=95d11fef88a68653b79491067c838097
