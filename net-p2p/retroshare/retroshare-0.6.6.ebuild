@@ -7,27 +7,25 @@ inherit desktop edos2unix qmake-utils xdg-utils
 
 DESCRIPTION="P2P private sharing application"
 HOMEPAGE="https://retroshare.cc"
-SRC_URI="https://github.com/RetroShare/RetroShare/archive/refs/tags/v0.6.6.tar.gz -> ${PN}-${PV}.tar.gz
-"
+SRC_URI="http://download.opensuse.org/repositories/network:/retroshare/Debian_Testing/retroshare-common_${PV}.orig.tar.gz -> ${P}.tar.gz"
 
 # pegmarkdown can also be used with MIT
 LICENSE="AGPL-3 GPL-2 GPL-3 Apache-2.0 LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="cli control-socket gnome-keyring +gui +jsonapi service +sqlcipher webui +xapian"
+KEYWORDS="~amd64 ~x86"
+IUSE="autologin cli +gui +jsonapi libupnp +miniupnp +service +sqlcipher"
 
 REQUIRED_USE="
-	|| ( cli gui service )
-	service? ( jsonapi )"
+	|| ( gui service )
+	?? ( libupnp miniupnp )
+	service? ( || ( cli jsonapi ) )"
 
 RDEPEND="
 	app-arch/bzip2
 	dev-libs/openssl:0=
 	>=dev-libs/rapidjson-1.1.0
-	net-libs/miniupnpc:=
 	sys-libs/zlib
-	control-socket? ( dev-qt/qtnetwork:5 )
-	gnome-keyring? ( app-crypt/libsecret )
+	autologin? ( app-crypt/libsecret )
 	gui? (
 		dev-qt/qtcore:5
 		dev-qt/qtmultimedia:5
@@ -41,11 +39,11 @@ RDEPEND="
 		x11-libs/libX11
 		x11-libs/libXScrnSaver
 	)
+	libupnp? ( net-libs/libupnp )
+	miniupnp? ( net-libs/miniupnpc )
 	service? ( dev-qt/qtcore:5 )
 	sqlcipher? ( dev-db/sqlcipher )
-	!sqlcipher? ( dev-db/sqlite:3 )
-	webui? ( net-libs/libmicrohttpd )
-	xapian? ( dev-libs/xapian )"
+	!sqlcipher? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
 	dev-qt/qtcore:5
@@ -53,14 +51,9 @@ DEPEND="${RDEPEND}
 
 BDEPEND="dev-util/cmake
 	virtual/pkgconfig
-	jsonapi? (
-		|| (
-			>=app-doc/doxygen-1.8.17
-			<app-doc/doxygen-1.8.16
-		)
-	)"
+	jsonapi? ( app-doc/doxygen )"
 
-S="${WORKDIR}"/RetroShare-${PV}
+S="${WORKDIR}"/RetroShare
 
 src_prepare() {
 	# CRLF endings break patch...
@@ -71,42 +64,38 @@ src_prepare() {
 src_configure() {
 	local qConfigs=()
 
-	qConfigs+=( $(usex cli '' 'no_')retroshare_nogui )
-	qConfigs+=( $(usex control-socket '' 'no_')libresapilocalserver )
-	qConfigs+=( $(usex gnome-keyring '' 'no_')rs_autologin )
+	qConfigs+=( $(usex cli '' 'no_')rs_service_terminal_login )
+	qConfigs+=( $(usex autologin '' 'no_')rs_autologin )
 	qConfigs+=( $(usex gui '' 'no_')retroshare_gui )
 	qConfigs+=( $(usex jsonapi '' 'no_')rs_jsonapi )
 	qConfigs+=( $(usex service '' 'no_')retroshare_service )
 	qConfigs+=( $(usex sqlcipher '' 'no_')sqlcipher )
-	qConfigs+=( $(usex webui '' 'no_')libresapihttpserver )
-	qConfigs+=( $(usex xapian '' 'no_')rs_deep_search )
+
+	qUpnpLibs="none"
+	if use miniupnp; then
+		qUpnpLibs="miniupnpc"
+	elif use libupnp; then
+		qUpnpLibs="upnp ixml"
+	fi
 
 	eqmake5 CONFIG+="${qConfigs[*]}" \
 		RS_MAJOR_VERSION=$(ver_cut 1) RS_MINOR_VERSION=$(ver_cut 2) \
 		RS_MINI_VERSION=$(ver_cut 3) RS_EXTRA_VERSION="-gentoo-${PR}" \
-		RS_UPNP_LIB=miniupnpc
+		RS_UPNP_LIB="${qUpnpLibs}"
 }
 
 src_compile() {
-	use jsonapi && {
-		nonfatal emake ||
-			elog "Due to a bug in RetroShare-v0.6.5 build system when JSON API is enabled, failure at first emake is normal"
-	}
-
 	emake
 }
 
 src_install() {
-	use cli && dobin retroshare-nogui/src/retroshare-nogui
 	use gui && dobin retroshare-gui/src/retroshare
 	use service && dobin retroshare-service/src/retroshare-service
 
 	insinto /usr/share/retroshare
 	doins libbitdht/src/bitdht/bdboot.txt
 
-	use webui && doins -r libresapi/src/webui
-
-	dodoc README.md
+	dodoc README.asciidoc
 	make_desktop_entry retroshare
 
 	for i in 24 48 64 128 ; do
