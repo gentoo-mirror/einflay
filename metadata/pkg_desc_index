@@ -2,7 +2,7 @@ app-admin/distrobuilder 1.0 1.0_p126: System container image builder for LXC and
 app-admin/nsexec-lbthomsen 1.22_p20180419: Utilities for non-root LXC containers
 app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using the GTK+ libraries.
 app-editors/manpageeditor 0.1.3_p5: Man Page Editor
-app-emulation/lxc 4.0.0 4.0.0_p9: LinuX Containers userspace utilities
+app-emulation/lxc 4.0.0 4.0.0_p9 4.0.9_p1694: A userspace interface for the Linux kernel containment features
 app-misc/aha 0.5.1_p10: Ansi HTML Adapter
 app-office/gtg 0.4.0-r1: Personal organizer for the GNOME desktop environment
 app-office/mytetra 1.44.139: Smart manager for information collecting
