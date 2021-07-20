@@ -3,18 +3,45 @@
 
 EAPI=7
 
-inherit autotools bash-completion-r1 linux-info flag-o-matic optfeature pam readme.gentoo-r1 systemd verify-sig
+#
+inherit autotools
+#
+inherit bash-completion-r1
+#
+inherit linux-info
+#
+inherit flag-o-matic
+# 
+inherit pam
+#
+inherit readme.gentoo-r1
+#
+inherit systemd
 
 DESCRIPTION="A userspace interface for the Linux kernel containment features"
 HOMEPAGE="https://linuxcontainers.org/ https://github.com/lxc/lxc"
-SRC_URI="https://linuxcontainers.org/downloads/lxc/${P}.tar.gz
-	verify-sig? ( https://linuxcontainers.org/downloads/lxc/${P}.tar.gz.asc )"
 
-KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86"
+RESTRICT="mirror"
+EGIT_COMMIT="2ccc8081d2f37b34523cd95ec19aece6b006caad"
+SRC_URI="https://github.com/lxc/lxc/archive/${EGIT_COMMIT}.tar.gz -> ${CATEGORY}-${PN}-${PV}.tar.gz"
+S="${WORKDIR}/lxc-${EGIT_COMMIT}"
+
+KEYWORDS="amd64 arm64"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="apparmor +caps doc man pam selinux +ssl +tools verify-sig"
+IUSE="
+	apparmor
+	+caps
+	doc
+	man
+	pam
+	selinux
+	+ssl
+	+tools
+	+templates
+	verify-sig
+"
 
 RDEPEND="acct-group/lxc
 	acct-user/lxc
@@ -35,6 +62,7 @@ DEPEND="${RDEPEND}
 BDEPEND="doc? ( app-doc/doxygen )
 	man? ( app-text/docbook-sgml-utils )
 	verify-sig? ( app-crypt/openpgp-keys-linuxcontainers )"
+PDEPEND="templates? ( app-emulation/lxc-templates )"
 
 CONFIG_CHECK="~!NETPRIO_CGROUP
 	~CGROUPS
@@ -72,7 +100,7 @@ pkg_setup() {
 }
 
 PATCHES=(
-	"${FILESDIR}"/lxc-4.0.9-handle-kernels-with-CAP_SETFCAP.patch # bug 789012
+#	"${FILESDIR}"/lxc-4.0.9-handle-kernels-with-CAP_SETFCAP.patch # bug 789012
 	"${FILESDIR}"/${PN}-3.0.0-bash-completion.patch
 	"${FILESDIR}"/${PN}-2.0.5-omit-sysconfig.patch # bug 558854
 )
@@ -148,7 +176,7 @@ src_install() {
 
 	# Remember to compare our systemd unit file with the upstream one
 	# config/init/systemd/lxc.service.in
-	systemd_newunit "${FILESDIR}"/${PN}_at.service.4.0.0 "lxc@.service"
+	systemd_newunit "${FILESDIR}"/${PN}_at.service.4 "lxc@.service"
 
 	DOC_CONTENTS="
 		For openrc, there is an init script provided with the package.
