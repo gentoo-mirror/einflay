@@ -1,13 +1,14 @@
-BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
 DEFINED_PHASES=configure install preinst prepare unpack
 DEPEND=sys-apps/help2man dev-libs/glib:2 sys-fs/fuse:0
 DESCRIPTION=FUSE filesystem for LXC
 EAPI=7
 HOMEPAGE=https://linuxcontainers.org/lxcfs/introduction/
+INHERIT=autotools systemd vcs-snapshot
 LICENSE=Apache-2.0
 RDEPEND=dev-libs/glib:2 sys-fs/fuse:0
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/lxc/lxcfs/archive/2df8b9f9b20fb9dd76f8ca8d77eadf3458f25b5b.tar.gz -> sys-fs-lxcfs-4.0.1.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
+_eclasses_=autotools	c9df06c186913b43eb211100ef5fe2cf	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	de4beb52bfa93c4c5d96792a6b5e1784	systemd	2736b403a83f194b59b767f3b344c2c1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
 _md5_=8072fc059e49a6fd38af06d7e25f794e

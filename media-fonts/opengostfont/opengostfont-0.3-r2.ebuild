@@ -7,7 +7,7 @@ EAPI=7
 # https://bugs.gentoo.org/433786
 
 SLOT="0"
-KEYWORDS="amd64 arm64 x85"
+KEYWORDS="~amd64 ~arm64 ~x85"
 
 PYTHON_COMPAT=( python3_9 )
 

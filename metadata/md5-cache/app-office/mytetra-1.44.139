@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-qt/qtgui:5 dev-qt/qtcore:5 dev-qt/qtxmlpatterns:5 dev-qt/qtsvg:5
+DESCRIPTION=Smart manager for information collecting
+EAPI=7
+HOMEPAGE=https://github.com/xintrea/mytetra_dev
+INHERIT=qmake-utils
+IUSE=debug
+KEYWORDS=amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtgui:5 dev-qt/qtcore:5 dev-qt/qtxmlpatterns:5 dev-qt/qtsvg:5
+SLOT=0
+SRC_URI=https://github.com/xintrea/mytetra_dev/archive/v.1.44.139.tar.gz
+_eclasses_=multilib	de4beb52bfa93c4c5d96792a6b5e1784	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=49c3342ccb6dbc43ec8001ff4ce42b2b
