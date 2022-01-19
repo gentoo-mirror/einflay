@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=app-arch/unzip
+DESCRIPTION=Open-source version of the fonts by Russian standard GOST 2.304-81
+EAPI=7
+HOMEPAGE=https://fontstorage.com/font/nikita-volchenkov/opengost-a
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=OFL-1.10
+SLOT=0
+SRC_URI=https://webfonts.ru/original/opengosta/opengosta.zip
+_eclasses_=font	0667878c2b594871023dd1833d05996f
+_md5_=c866f0c5d4f7b40d4dd70aab41001f85

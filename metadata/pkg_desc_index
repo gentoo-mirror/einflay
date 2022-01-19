@@ -15,7 +15,7 @@ dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1: PySide development tools (lupdate, rcc, uic)
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
 games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
-media-fonts/opengostfont 0.3-r2: Free version of Russian standard (GOST) Type1 fonts
+media-fonts/opengostfont 0.3-r2 1.0-r1: Open-source version of the fonts by Russian standard GOST 2.304-81
 media-gfx/freecad 0.18.5: QT based Computer Aided Design application
 media-gfx/iscan-plugin-gt1500 2.2.0.1-r2: Epson GT-1500 scanner plugin for SANE 'epkowa' backend.
 media-gfx/ktikz 0.13.1 9999: A QT5-based editor for the TikZ language
