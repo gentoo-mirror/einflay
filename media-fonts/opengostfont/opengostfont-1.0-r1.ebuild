@@ -12,7 +12,7 @@ S="${WORKDIR}"
 
 LICENSE="OFL-1.10"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 x86"
 
 DEPEND="app-arch/unzip"
 
