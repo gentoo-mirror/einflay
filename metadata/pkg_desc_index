@@ -27,4 +27,3 @@ myruntime/plugin-for-the-first-use-case 1.12: Plugin for myapp
 net-libs/restbed 4.7: For applications that require seamless and secure communication over HTTP
 net-p2p/retroshare 0.6.6: P2P private sharing application
 sys-fs/lxcfs 4.0.1 4.0.1_p37: FUSE filesystem for LXC
-sys-kernel/gentoo-sources 5.10.14: Full sources including the Gentoo patchset for the 5.10 kernel tree
