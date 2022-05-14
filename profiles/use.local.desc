@@ -1,8 +1,0 @@
-# This file is deprecated as per GLEP 56 in favor of metadata.xml.
-# Please add your descriptions to your package's metadata.xml ONLY.
-# * generated automatically using pmaint *
-
-app-emulation/lxc:apparmor - Enable AppArmor support
-app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
-app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
-media-gfx/ktikz:ktexteditor - Using KTextEditor framework

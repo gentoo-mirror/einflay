@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Utilities for non-root LXC containers
-EAPI=7
-HOMEPAGE=https://github.com/lbthomsen/nsexec
-KEYWORDS=~amd64
-RESTRICT=mirror
-SLOT=0
-SRC_URI=https://github.com/lbthomsen/nsexec/archive/13376b1335d3c7bb79e62bd355b558f03a60ed43.tar.gz
-_md5_=cbe0e6c10297cab683933357ae63ad6b
