@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=
+DESCRIPTION=MyApplication for demonstrating packaging errors and failures
+EAPI=6
+HOMEPAGE=https://github.com/EinstokFair/einflay
+INHERIT=eapi7-ver myapp-core
+IUSE=symlink debug
+KEYWORDS=~amd64 ~x86 ~ppc
+LICENSE=GPLv2
+RDEPEND=
+RESTRICT=mirror
+SLOT=1.12
+_eclasses_=eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	myapp-core	97b2648d68d66a51edeaee92d3ae7873
+_md5_=0e987b29d1e191babf3f8ba7983f1c12
