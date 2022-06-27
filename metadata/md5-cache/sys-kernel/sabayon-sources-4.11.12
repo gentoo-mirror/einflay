@@ -12,5 +12,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=mirror binchecks strip
 SLOT=4.11
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.11.tar.xz mirror://sabayon/sys-kernel/4.11-sabayon-4.11.12.patch.xz
-_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	estack	055c42df72f76a4f45ec92b35e83cd56	kernel-2	b4d5583ac9c087a13f067ef82e3e5e03	sabayon-artwork	3e80653ccb0ca1f881a6b5167b3a7750	mount-boot	02a45c5e022c08dbc05178522b2772f2	linux-info	dcbf4f67bc38bee48e9d69a4344e8059	sabayon-kernel	959755e0c71227083bdb7ce70c9bcbcb
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	estack	055c42df72f76a4f45ec92b35e83cd56	kernel-2	b4d5583ac9c087a13f067ef82e3e5e03	sabayon-artwork	3e80653ccb0ca1f881a6b5167b3a7750	mount-boot	02a45c5e022c08dbc05178522b2772f2	linux-info	dcbf4f67bc38bee48e9d69a4344e8059	sabayon-kernel	959755e0c71227083bdb7ce70c9bcbcb
 _md5_=ff8797128f1e4153cc2a0e2d4f2dc802
