@@ -7,7 +7,6 @@ app-emulation/lxc:cgmanager - Enable support for cgroup management using app-adm
 app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
-dev-python/pyside2-tools:tools - Install supplementary tools (rcc, uic, designer)
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
 games-strategy/freeciv:mapimg - Additional mag image toolkit via media-gfx/imagemagick
@@ -51,4 +50,9 @@ net-p2p/retroshare:service - Enables the new RetroShare service controllable onl
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
 net-p2p/retroshare:webui - Enables Web interface and API support
 net-p2p/retroshare:xapian - Enables GXS content indexing and search through Xapian
+sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may affect performance)
+sci-astronomy/stellarium:media - Enable sound and video support
+sci-astronomy/stellarium:stars - Install extra star catalogs
+sci-astronomy/stellarium:telescope - Enable telescope control via sci-libs/indilib
+sci-astronomy/stellarium:webengine - Show online results about the selected star in an embedded window using dev-qt/qtwebengine
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
