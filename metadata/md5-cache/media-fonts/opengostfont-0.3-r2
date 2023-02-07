@@ -1,6 +1,6 @@
 BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
 DEFINED_PHASES=install postinst postrm prepare setup
-DEPEND=app-arch/xz-utils || ( >=dev-lang/python-3.9.16:3.9 ) media-gfx/fontforge[python] dev-python/fonttools
+DEPEND=app-arch/xz-utils || ( >=dev-lang/python-3.9.16-r1:3.9 ) media-gfx/fontforge[python] dev-python/fonttools
 DESCRIPTION=Free version of Russian standard (GOST) Type1 fonts
 EAPI=7
 HOMEPAGE=https://bitbucket.org/fat_angel/opengostfont
@@ -10,5 +10,5 @@ KEYWORDS=~amd64 ~arm64 ~x85
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://bitbucket-archive.softwareheritage.org/new-static/f6/f638fddd-3d47-4470-98f8-851196b76418/attachments/opengostfont-src-0.3.tar.xz -> opengostfont-src-0.3.tar.xz
-_eclasses_=font	5e03cb70902daa9ff8967c61130f0f60	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	8d5c1c4ecef47fa1b4576a718c620d1d	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29
+_eclasses_=font	5e03cb70902daa9ff8967c61130f0f60	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29
 _md5_=53232abc3da2f796774f431008aff985
