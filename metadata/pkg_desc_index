@@ -4,12 +4,9 @@ app-editors/gmanedit2 0.4.2_p45: An editor for man pages that runs on X using th
 app-editors/manpageeditor 0.1.3_p5: Man Page Editor
 app-emulation/lxc 4.0.0 4.0.0_p9 4.0.9_p1694: A userspace interface for the Linux kernel containment features
 app-misc/aha 0.5.1_p10: Ansi HTML Adapter
-app-office/gtg 0.4.0-r1: Personal organizer for the GNOME desktop environment
 app-office/mytetra 1.44.139: Smart manager for information collecting
 dev-cpp/kashmir 2015.08.05: Library is provide functionality that not present in the C++ standard library.
-dev-lang/ispc 1.14.1-r1: Intel SPMD Program Compiler
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
-dev-python/liblarch 3.0.1-r1: Library to handle directed acyclic graphs
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
 games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
 media-fonts/opengostfont 0.3-r2 1.0-r1: Open-source version of the fonts by Russian standard GOST 2.304-81
