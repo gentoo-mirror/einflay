@@ -1,0 +1,15 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/haskell-gi-base-0.24:=[profile?] <dev-haskell/haskell-gi-base-0.27:=[profile?] >=dev-haskell/utf8-string-0.2:=[profile?] <dev-haskell/utf8-string-1.1:=[profile?] >=dev-lang/ghc-8.4.3:= x11-libs/cairo[glib] >=dev-haskell/c2hs-0.28 <dev-haskell/c2hs-0.30 >=dev-haskell/cabal-2.2.0.1 virtual/pkgconfig hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=GI friendly Binding to the Cairo library
+EAPI=8
+HOMEPAGE=https://github.com/cohomology/gi-cairo-render
+INHERIT=haskell-cabal
+IUSE=+svg doc hscolour profile
+KEYWORDS=amd64
+LICENSE=BSD
+RDEPEND=>=dev-haskell/haskell-gi-base-0.24:=[profile?] <dev-haskell/haskell-gi-base-0.27:=[profile?] >=dev-haskell/utf8-string-0.2:=[profile?] <dev-haskell/utf8-string-1.1:=[profile?] >=dev-lang/ghc-8.4.3:= x11-libs/cairo[glib]
+SLOT=0/0.1.1
+SRC_URI=https://hackage.haskell.org/package/gi-cairo-render-0.1.1/gi-cairo-render-0.1.1.tar.gz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ghc-package	dbe1a8d17cacb390a3df7bbba6617679	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	haskell-cabal	13a2f21e4152733139de87f74c2f99dd
+_md5_=5bee286e481e5ee58eebd977d76c7537

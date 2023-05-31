@@ -5,6 +5,7 @@
 app-emulation/lxc:apparmor - Enable AppArmor support
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
+dev-haskell/gi-cairo-render:svg - Build the Scalable Vector Graphics (SVG) backend of Cairo.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
 games-strategy/freeciv:mapimg - Additional mag image toolkit via media-gfx/imagemagick
