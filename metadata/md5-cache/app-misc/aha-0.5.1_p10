@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=|| ( MPL-1.0 LGPL-2+ )
 SLOT=0
 SRC_URI=https://codeload.github.com/theZiz/aha/tar.gz/986eab3df6a075f4d509511e3a8fcfead6c4c26b -> aha-0.5.1_p10.tar.gz
-_eclasses_=vcs-snapshot	eab6d8533446763c2e9777d8bbd1594e	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_eclasses_=vcs-snapshot	eab6d8533446763c2e9777d8bbd1594e	toolchain-funcs	67b3e3d8916d690003f645486ed86aac	multilib	c19072c3cd7ac5cb21de013f7e9832e0
 _md5_=f8bb865d448d6b8b42f187699c4c1e82
