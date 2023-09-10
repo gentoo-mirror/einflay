@@ -13,7 +13,6 @@ games-strategy/freeciv:modpack - Build the freeciv-modpack-program to download/i
 games-strategy/freeciv:server - Enable server support. Disabling this will also make it impossible to start local games.
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
-media-gfx/ktikz:ktexteditor - Using KTextEditor framework
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
