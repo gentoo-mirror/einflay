@@ -9,6 +9,7 @@ dev-haskell/gi-cairo-render 0.1.1 0.1.1-r1: GI friendly Binding to the Cairo lib
 dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
 dev-util/sasm 3.11.1: Simple crossplatform IDE for NASM assembly language
 games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
+mate-base/caja 1.26.3: Caja file manager for the MATE desktop
 media-fonts/opengostfont 1.0-r1: Open-source version of the fonts by Russian standard GOST 2.304-81
 media-gfx/iscan-plugin-gt1500 2.2.0.1-r2: Epson GT-1500 scanner plugin for SANE 'epkowa' backend.
 media-libs/draco 1.3.5-r3: Library for compressing and decompressing 3D geometric objects
