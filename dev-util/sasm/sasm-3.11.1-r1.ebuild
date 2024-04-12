@@ -31,7 +31,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	dev-lang/nasm
-	sys-devel/gdb
+	dev-debug/gdb
 "
 
 # SASM repository contains precompiled binaries ¯\_(ツ)_/¯
