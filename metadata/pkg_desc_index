@@ -7,7 +7,6 @@ app-misc/minder 1.16.0: Mind-mapping application for Elementary OS.
 app-office/mytetra 1.44.139: Smart manager for information collecting
 dev-cpp/kashmir 2015.08.05: Library is provide functionality that not present in the C++ standard library.
 dev-haskell/gi-cairo-render 0.1.1 0.1.1-r1: GI friendly Binding to the Cairo library
-dev-lisp/iterate 1.5: ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
 dev-util/sasm 3.11.1-r1: Simple crossplatform IDE for NASM assembly language
 games-strategy/freeciv 2.6.3: multiplayer strategy game (Civilization Clone)
 mate-base/caja 1.26.3: Caja file manager for the MATE desktop
