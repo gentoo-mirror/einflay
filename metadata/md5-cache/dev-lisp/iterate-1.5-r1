@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare unpack
+DESCRIPTION=ITERATE is a lispy and extensible replacement for the Common Lisp LOOP macro
+EAPI=8
+HOMEPAGE=http://common-lisp.net/project/iterate/
+INHERIT=common-lisp-3
+KEYWORDS=amd64 ~ppc ~sparc ~x86
+LICENSE=MIT
+PDEPEND=virtual/commonlisp
+RDEPEND=!dev-lisp/cl-iterate
+SLOT=0
+SRC_URI=http://common-lisp.net/project/iterate/releases/iterate-1.5.tar.gz
+_eclasses_=common-lisp-3	88af864b4f39f37d424b77289041a809
+_md5_=c6c0a62bcc79ca81abf4739150400eeb
