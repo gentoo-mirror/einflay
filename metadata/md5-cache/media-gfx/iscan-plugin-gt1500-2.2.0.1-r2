@@ -11,5 +11,5 @@ LICENSE=EPSON EAPL
 RDEPEND=minimal? ( >=media-gfx/iscan-2.21.0 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~flameeyes/avasys/iscan-plugin-gt-1500-2.2.0-1.x86_64.rpm
-_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	estack	c61c368a76fdf3a82fdf8dbaebea3804	rpm	7828cd38ff559545ca52f92064d0f8f4
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	estack	c61c368a76fdf3a82fdf8dbaebea3804	rpm	7828cd38ff559545ca52f92064d0f8f4
 _md5_=58ef166796e1871fd11e3c32d6767ded
