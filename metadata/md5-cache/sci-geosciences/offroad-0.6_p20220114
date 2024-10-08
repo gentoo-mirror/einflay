@@ -10,5 +10,5 @@ RDEPEND=>=virtual/jre-11 >=dev-java/java-config-2.2.0-r3
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://api.github.com/repos/Shushandr/offroad/tarball/5cee1128268bcef77a3007616607728366078f04 -> sci-geosciences-offroad-0.6_p20220114.tar.gz
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	java-utils-2	f1da644b1cb86c9aca40b31a544a9906	java-pkg-2	cc4b7c2e885aaf57a8bbea685bd9fbe3	multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	java-ant-2	ad653f6ce057f94c49254ace4f0f8335	vcs-snapshot	3d327d546f76e4c2054573ff0d78fad2
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	java-utils-2	f1da644b1cb86c9aca40b31a544a9906	java-pkg-2	cc4b7c2e885aaf57a8bbea685bd9fbe3	multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	java-ant-2	4051a89fa0bfa0ef171921ea1f3cb262	vcs-snapshot	3d327d546f76e4c2054573ff0d78fad2
 _md5_=46dd8216225b8234b388e519853e9a1d
