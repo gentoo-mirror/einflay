@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtksourceview:2.0 >=x11-libs/gtk+-2.24.12
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://api.github.com/repos/Distrotech/gmanedit2/tarball/2c0b06288b56d2384efd7fd80f26546de244f52c -> gmanedit2-0.4.2_p45.tar.gz
-_eclasses_=vcs-snapshot	3d327d546f76e4c2054573ff0d78fad2
+_eclasses_=vcs-snapshot	bd69bf57fd2c34e99964a03b1d968177
 _md5_=301e6020c79618cf4cc5866c05a1315d
