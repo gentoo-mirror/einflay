@@ -18,4 +18,5 @@ media-libs/draco 1.3.5-r3: Library for compressing and decompressing 3D geometri
 myruntime/plugin-for-the-first-use-case 1.12: Plugin for myapp
 net-p2p/retroshare 0.6.6: P2P private sharing application
 sci-astronomy/stellarium 0.22.2: 3D photo-realistic skies in real time
+sci-geosciences/offroad 0.6_p20220114: Offline vector map display ported from OsmAnd
 sys-fs/lxcfs 4.0.1 4.0.1_p37: FUSE filesystem for LXC
