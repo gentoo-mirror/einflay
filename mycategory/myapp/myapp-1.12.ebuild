@@ -1,9 +1,9 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2024 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="8"
 RESTRICT="mirror"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="amd64 ~x86 ~ppc"
 
 inherit eapi7-ver 
 SLOT="$(ver_cut 1-2)"
