@@ -5,7 +5,6 @@ EAPI="8"
 RESTRICT="mirror"
 KEYWORDS="amd64 ~x86 ~ppc"
 
-inherit eapi7-ver 
 SLOT="$(ver_cut 1-2)"
 
 inherit myapp-core
